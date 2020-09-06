@@ -1,0 +1,106 @@
+<html>
+<head>
+	<link rel="stylesheet" href="{{url_for('static',filename='css/home.css')}}">
+	<style>
+		body{
+	margin:0;
+	padding:15px;
+	background-color:#d1d1e0;
+}
+		table{
+			padding:15px;
+		}
+		th,td{
+			padding:15px;
+			background-color:#8080ff;
+		}
+		h2{
+			background-color: #9494b8;
+			color:#00004d;
+		}
+		
+	</style>
+</head>
+	<body>
+		<div class="container">
+		     <div class="header">
+			     <h1>LIBRARY MANAGEMENT SYSTEM</h1>
+			     
+		     </div>
+		
+		<div class="top" >
+			<nav>
+            <ul class="topnav">
+			<li><a href="#profile" >view profile</a></li>
+			<li><a href="#books" >view issued books</a></li>
+			<li><a href="{{url_for('stdlogout')}}" >logout</a></li>
+		   </ul>
+	      </nav>
+	      </div>
+	      <hr>
+	       <div class="user" style="background-color: #9494b8;">
+		     	<h3>WELCOME {{uname }}</h3>
+		     </div>
+		     <hr>
+		
+
+		<div style="background-color: #9494b8; ">
+		<img  style="border-radius: 50%;"src="{{url_for('static',filename='css/student.jpg')}}" alt="student" >
+	   </div>
+	   <hr>
+		
+
+	    <a name="profile"></a>
+	    <div class="userpro" style="background-color: #9494b8;">
+	    	<h2> YOUR PROFILE</h2>
+	    	<p>ROLLNO      :       {{profile[0]}}</p>
+	    	   
+	    	 <p>NAME       :       {{profile[1]}}</p>
+
+	    	 <p>BRANCH     :       {{profile[2]}}</p>
+	    	 <p>TOTAL FINE :        {{profile[3]}}</p>
+	    	 
+	    </div>
+	    <hr>
+
+        <p><br></p>
+        <p><br></p><p><br></p>
+        
+
+      <a name="books"></a>
+	    <h2> ISSUED BOOKS</h2>
+		<div style="background-color: #9494b8;text-align: center;">
+           
+		   <table >
+		   	<tr>
+		   		<th>BOOK_ID</th>
+		   		<th>BOOK_NAME</th>
+		   		<th>ISSUE DATE</th>
+		   	</tr>
+		   	{%for row in issbooks%}
+		   	<tr>
+		   	<td>{{row[0]}}</td>
+		   	<td>{{row[1]}}</td>
+		   	<td>{{row[2]}}</td>
+		   </tr>
+		   	{%endfor%}
+		   </table>
+	    </div>
+	    <hr>
+	    <p><br></p>
+        <p><br></p><p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+    </div>
+		
+	</body>
+</html>

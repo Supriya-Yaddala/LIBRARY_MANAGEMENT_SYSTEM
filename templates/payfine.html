@@ -1,0 +1,19 @@
+<html>
+<head>
+	<link rel="stylesheet" href="{{url_for('static',filename='css/home.css')}}">
+	</head>
+	<body>
+		<div class="container">
+		<div class="formsec">
+		
+		<form action="{{url_for('payfine')}}" method="post" >
+			<h2>PAY FINE</h2>
+			<p>ROLL NO:</p>
+			<input type="number" placeholder="ROLLNO" name="ui" required>
+			<p>FINE:</p>
+			<input type="number" placeholder="FINE" name="fn" required>
+			<p></p>
+			<input type="submit" value="submit">
+		</form>
+	</body>
+</html>

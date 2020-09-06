@@ -1,0 +1,36 @@
+<html>
+<head>
+	<style>
+		body{
+	margin:0;
+	padding:15px;
+	background-color:#d1d1e0;
+}
+		table{
+			padding:15px;
+		}
+		th,td{
+			padding:15px;
+			background-color:#8080ff;
+		}
+		
+	</style>
+</head>
+	<body>
+        <table>
+        	<tr>
+        		<th>ROLL NO</th>
+        		<th>NAME</th>
+        		<th>BRANCH</th>
+
+        	</tr>
+        	{%for row in res%}
+        	<tr>
+        		<td>{{row[0]}}</td>
+        		<td>{{row[1]}}</td>
+        		<td>{{row[2]}}</td>
+        	</tr>
+        	{%endfor%}
+        </table>
+	</body>
+</html>

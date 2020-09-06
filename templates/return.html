@@ -1,0 +1,28 @@
+<html>
+<head>
+	<link rel="stylesheet" href="{{url_for('static',filename='css/home.css')}}">
+</head>
+	<body>
+		<div class="container">
+		<div class="formsec">
+			{%if flag==5%}
+
+			<script>
+				var msg=String("{{fine}}");
+				
+				alert(msg);
+			</script>
+			{%endif%}
+		
+		<form action="{{url_for('returnbook')}}" method="post">
+			<h2>RETURN BOOK</h2>
+			<p>ISSUE ID</p>
+			<input type='number' placeholder="ISSUE ID" name="iid" required>
+			<p>RETURN DATE</p>
+			<input type='date' placeholder="RETURN DATE" name="rd" required>
+			<p><input type="submit" value="submit"></p>
+		</form>
+	</div>
+</div>
+	</body>
+</html>

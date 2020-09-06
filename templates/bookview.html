@@ -1,0 +1,55 @@
+<html>
+<head>
+	<title>ADMIN PAGE</title>
+	
+	<style>
+		body{
+	margin:0;
+	padding:15px;
+	background-color:#d1d1e0;
+}
+		table{
+			padding:15px;
+		}
+		th,td{
+			padding:15px;
+			background-color:#8080ff;
+		}
+		
+	</style>
+</head>
+	<body>
+		
+		
+   	<table>
+   		
+   		<tr >
+   			<th >BOOK_ID</th>
+   			<th >BOOK_NAME</th>
+   			<th >AUTHOR_NAME</th>
+   			<th>CATEGORY</th>
+   			<th>QUANTITY</th>
+   		</tr>
+   	
+   
+   		{%for rowv in res%}
+   		
+   		<tr >
+   			<td>{{rowv[0]}}</td>
+   			<td>{{rowv[1]}}</td>
+   			<td>{{rowv[2]}}</td>
+   			<td>{{rowv[3]}}</td>
+   			<td>{{rowv[4]}}</td>
+
+
+   		</tr>
+   
+   		{%endfor%}
+   	</table>
+   		
+		
+	
+
+		
+	</body>
+</html>

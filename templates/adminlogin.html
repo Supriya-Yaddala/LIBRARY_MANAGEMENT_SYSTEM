@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+	<title>LOGIN PAGE</title>
+	<link rel="stylesheet" href="{{url_for('static',filename='css/home.css')}}">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1>LIBRARY MANAGEMENT SYSTEM</h1>
+		</div>
+		<div class="formsec">
+			<form action="{{url_for('adminverify')}}" method="post">
+				<h2>ADMIN LOGIN</h2>
+			<div><input type="text" placeholder="username" name="nm" required></div>
+			<div><input type="password" placeholder="password" name="pd"required></div>
+			<div><input type="submit" value="submit"></div>
+		</form>
+		
+		</div>
+		<div class="log"><a href="{{url_for('home')}}" >Go Home</a></div>
+	</div>
+</body>
+</html>

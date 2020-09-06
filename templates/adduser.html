@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+	<title>ADDBOOK PAGE</title>
+	<link rel="stylesheet" href="{{url_for('static',filename='css/home.css')}}">
+</head>
+	<body>
+		<div class="container">
+			<div class="formsec">
+		
+		<form action="{{url_for('updateuser')}}" method="post" >
+			<h2>ADD USER</h2>
+			
+			<p>Roll No:</p>
+			<input type="text" placeholder="Enter your roll no" name="rn" required>
+			<p>User Name</p>
+			<input type="text" placeholder="Enter your username" name="un" required>
+			<p>Branch</p>
+			<input type="text" placeholder="Enter your branch" name="bh" required>
+			<p>Password</p>
+			<input type="password" placeholder="password" name="pd" required>
+			<p ><input type="submit" value="submit" ></p>
+		</form>
+	</div>
+	</div>
+	</body>
+</html>

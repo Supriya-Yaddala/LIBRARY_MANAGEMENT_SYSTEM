@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+	<title>ADDBOOK PAGE</title>
+	<link rel="stylesheet" href="{{url_for('static',filename='css/home.css')}}">
+</head>
+	<body>
+		<div class="container">
+		<div class="formsec">
+			{%if flag==6 %}
+
+			<script>
+				var msg=String("{{msg}}");
+				alert(msg);
+			</script>
+			{%endif%}
+			{%if flag==5%}
+
+			<script>
+				var msg=String("{{fine}}");
+				
+				alert(msg);
+			</script>
+			{%endif%}
+			
+		<form action="{{url_for('updatebook')}}" method="post">
+			<h2>ADD BOOK FORM</h2>
+			<p>BOOK NAME:</p>
+			<div><input type="text" placeholder="Book Name" name="bn" required></div>
+			<p>AUTHOR NAME</p>
+			<div><input type="text" placeholder="author name" name="an" required></div>
+			<p>CATEGORY</p>
+			<div><input type="text" placeholder="category" name="cg" required></div>
+			<p>BOOK ID</p>
+			<div><input type="number" placeholder="book id" name="bid" required></div>
+			<p>QUANTITY</p>
+			<div><input type="number" placeholder="Quantity" name="qty" required></div>
+			<p>
+			<div><input type="submit"  value="submit"></div></p>
+		</form>
+	</div>
+</div>
+	</body>
+</html>

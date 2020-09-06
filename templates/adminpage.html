@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+	<title>ADMIN PAGE</title>
+	<link rel="stylesheet" href="{{url_for('static',filename='css/home.css')}}">
+	 <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="libray,management system,college">
+  <meta name="author" content="SUPRIYA">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+
+</head>
+	<body>
+		<div class="container">
+		     <div class="header">
+			     <h1>LIBRARY MANAGEMENT SYSTEM</h1>
+		     </div>
+		     <nav>
+		     	
+		     
+		     	<ul class="topnav" id="dropdownmenu">
+		     		<li><a href="{{url_for('addbookupdate')}}" target="iframe_a">HOME</a></li>
+		     		<li><a href="{{url_for('addbookupdate')}}" target="iframe_a">add books</a></li>
+		     		<li><a href="{{url_for('viewbooks')}}" target="iframe_a">view books</a></li>
+		     		<li><a href="{{url_for('adduser')}}" target="iframe_a">add user</a></li>
+		     		<li><a href="{{url_for('viewuser')}}" target="iframe_a">view users</a></li>
+		     		<li><a href="{{url_for('issue')}}" target="iframe_a">issue book</a></li>
+		     		<li><a href="{{url_for('viewissue')}}" target="iframe_a">view issued books</a></li>
+		     		<li><a href="{{url_for('returnb')}}" target="iframe_a">return book</a></li>
+		     		<li><a href="{{url_for('gopay')}}" target="iframe_a">pay fine</a></li>
+		     		<li><a href="{{url_for('gocheck')}}" target="iframe_a">check fine</a></li>
+		     		<li class="right"><a href="{{url_for('adlogout')}}">LOGOUT</a></li>
+		     		<li class="dropdown"><a href="#" onclick="dropdownclick()">&#9776;</a></li>
+		     	</ul>
+		     	<script>
+				function dropdownclick(){
+				var x=document.getElementById("dropdownmenu");
+				if (x.className==="topnav"){
+					x.className+=" responsive";
+				}
+				else
+				{
+					x.className="topnav";
+				}
+			}
+			</script>
+		
+		     </nav>
+		     <div class="display_sec">
+		  <iframe src="{{url_for('addbookupdate')}}" name="iframe_a" title="Iframe Example" width="100%" height="800px" style="border-width:0; "></iframe>
+		</div>
+		
+	   </div>
+	</body>
+</html>
